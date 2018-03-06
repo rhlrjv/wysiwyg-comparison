@@ -21,8 +21,12 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "angular-froala-wysiwyg": "^2.7.5",
     "core-js": "^2.4.1",
     "rxjs": "^5.5.6",
+    "showdown": "^1.8.6",
+    "turndown": "^4.0.1",
+    "turndown-plugin-gfm": "^1.0.1",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
