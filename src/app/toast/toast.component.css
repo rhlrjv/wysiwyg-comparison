@@ -1,3 +1,16 @@
 /deep/ table {
   border: 1px black solid;
 }
+
+/deep/ .te-mode-switch-section,
+/deep/ .tui-toolbar-icons.tui-codeblock,
+/deep/ .tui-toolbar-icons.tui-code,
+/deep/ .tui-toolbar-icons.tui-task,
+/deep/ .tui-toolbar-icons.tui-strike,
+/deep/ .tui-toolbar-divider,
+/deep/ .tui-popup-wrapper.te-heading-add li[data-value="4"],
+/deep/ .tui-popup-wrapper.te-heading-add li[data-value="5"],
+/deep/ .tui-popup-wrapper.te-heading-add li[data-value="6"]
+{
+  display: none;
+}

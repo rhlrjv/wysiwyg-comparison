@@ -23,9 +23,10 @@ export class ToastComponent implements OnInit {
     this.editor = new Editor({
       el: document.querySelector('#toastEditor'),
       initialEditType: 'wysiwyg',
-      previewStyle: 'vertical',
-      height: '300px'
-    });
+      previewStyle: 'tab',
+      height: 'auto'
+    }, true, true);
+
   }
 
 
