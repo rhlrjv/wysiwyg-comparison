@@ -1,20 +1,23 @@
 <h1>Froala editor</h1>
 <div [froalaEditor]="froalaOptions" [(froalaModel)]="editorContent"></div>
 
-<h5>html generated</h5>
-<div class="box">{{editorContent}}</div>
 
-<h5>converted to markdown</h5>
-<div class="box">{{markdown(editorContent)}}</div>
+<div *ngIf="debug">
+  <h5>html generated</h5>
+  <div class="box">{{editorContent}}</div>
+
+  <h5>converted to markdown</h5>
+  <div class="box">{{markdown(editorContent)}}</div>
 
 
-<h5>html from markdown</h5>
-<div class="box">{{html(markdown(editorContent))}}</div>
-
+  <h5>html from markdown</h5>
+  <div class="box">{{html(markdown(editorContent))}}</div>
+</div>
 
 <h5>rendered html from markdown</h5>
 <div class="box" [innerHTML]="html(markdown(editorContent))"></div>
 
-
-<h5>back into froala</h5>
-<div [froalaEditor]="froalaOptions" [froalaModel]="html(markdown(editorContent))"></div>
+<div *ngIf="debug">
+  <h5>back into froala</h5>
+  <div [froalaEditor]="froalaOptions" [froalaModel]="html(markdown(editorContent))"></div>
+</div>

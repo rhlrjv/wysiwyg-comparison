@@ -1,14 +1,15 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import TurndownService from 'turndown';
 import {gfm} from 'turndown-plugin-gfm';
 import * as showdown from 'showdown';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-froala',
   templateUrl: './froala.component.html',
   styleUrls: ['./froala.component.css']
 })
-export class FroalaComponent {
+export class FroalaComponent implements OnInit{
   converter: any;
   turndownService: any;
   public editorContent: String = "Hello There!"
@@ -52,14 +53,22 @@ export class FroalaComponent {
     imageTextNear: false,
     imageDefaultWidth: 0
   }
+  debug: boolean;
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
     this.turndownService = new TurndownService({
       headingStyle: 'atx'
     });
 
     this.converter = new showdown.Converter();
     this.converter.setFlavor('github');
+  }
+
+  ngOnInit(): void {
+    this.route.data
+      .subscribe((data) => {
+        this.debug = data.debug;
+      });
   }
 
   markdown(htmlContent: String): String {

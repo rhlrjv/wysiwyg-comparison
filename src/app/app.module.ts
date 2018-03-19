@@ -10,8 +10,11 @@ import {RouterModule, Routes} from "@angular/router";
 
 
 const appRoutes: Routes = [
-  {path: 'froala', component: FroalaComponent},
-  {path: 'toast', component: ToastComponent}
+  {path: 'froala', component: FroalaComponent, data: {debug: false}},
+  {path: 'toast', component: ToastComponent, data: {debug: false}},
+  {path: 'froala-test', component: FroalaComponent, data: {debug: true}},
+  {path: 'toast-test', component: ToastComponent, data: {debug: true}},
+  {path: '', redirectTo: '/froala', pathMatch: 'full'}
 ];
 
 

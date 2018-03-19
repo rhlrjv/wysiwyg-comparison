@@ -1,11 +1,13 @@
 <h1>Toast editor</h1>
 <div id="toastEditor"></div>
 
-<h5>markdown generated</h5>
-<div class="box">{{editor.getMarkdown()}}</div>
+<div *ngIf="debug">
+  <h5>markdown generated</h5>
+  <div class="box">{{editor.getMarkdown()}}</div>
 
-<!--<h5>html from markdown</h5>-->
-<!--<div class="box">{{html(editor.getMarkdown())}}</div>-->
+  <h5>html from markdown</h5>
+  <div class="box">{{html(editor.getMarkdown())}}</div>
+</div>
 
 <h5>rendered html from markdown</h5>
 <div class="box" [innerHTML]="html(editor.getMarkdown())"></div>
