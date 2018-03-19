@@ -30,7 +30,7 @@ const appRoutes: Routes = [
     FroalaViewModule.forRoot(),
     RouterModule.forRoot(
       appRoutes,
-      {}
+      {useHash: true}
     )
   ],
   providers: [],
